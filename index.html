@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Blocks of creativity</title>
+</head>
+
+<body>
+  <div class="page-load" id="page-load-fade">
+    <div class="spinner">
+      <div class="cube1"></div>
+      <div class="cube2"></div>
+    </div>
+  </div>
+  <main class="container" id="main">
+    <header class="header" id="header">
+      <div class="burger-container">
+        <div class="burger-icon"></div>
+      </div>
+      <a href="./index.html">
+        <img class="header__logo" id="header-img" src="./img/logo.png" alt="brand logo">
+      </a>
+      <nav class="site-nav site-nav--flex" id="nav-bar">
+        <ul class="site-nav__list site-nav__list--h-grid">
+          <li>
+            <a class="site-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="site-nav__link" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="site-nav__link" href="#video">Video</a>
+          </li>
+        </ul>
+        <ul class="site-nav__list site-nav__list--mobile" id="mobile-nav">
+          <li>
+            <a class="site-nav__link--mobile" href="#about">About</a>
+          </li>
+          <li>
+            <a class="site-nav__link--mobile" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="site-nav__link--mobile" href="#video">Video</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- HERO -->
+<!--     <h1 class="hero__h1--mobile">
+      <span class="tc-blue">Blocks</span>
+      <br>
+      <span class="tc-teal">of creativity</span>
+    </h1> -->
+    <section class="hero" id="welcome-section">
+      <div class="hero__title" id="title">
+        <h1 class="hero__h1">
+          <span class="tc-blue">Blocks</span>
+          <br>
+          <span class="tc-teal">of creativity</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about full p-tb-10rem" id="about">
+      <div class="wrapper">
+        <h2 class="about-header about__h2">Introduction</h2>
+        <hr>
+        <h3 class="about-header about__h3">me</h3>
+        <img class="about__img" src="./img/project-page-comp-v1-about-sectionv2-50p.jpg" alt="">
+        <blockquote class="about__quote">Nothing brings to life again a forgotten memory like a about -
+          <cite>Christopher Poindexter</cite>
+        </blockquote>
+        <div class="bg-detail bg-detail--orange"></div>
+        <div class="bg-detail bg-detail--red-orange"></div>
+      </div>
+    </section>
+
+    <!-- portfolio grid -->
+    <section class="portfolio full p-tb-10rem" id="portfolio">
+      <h2 class="section__header">Portfolio projects</h2>
+      <div class="portfolio__grid">
+        <div class="portfolio__project" id="img-div">
+          <a href="#" class="portfolio__project-name" id="img-caption">Dolores magni</a>
+          <img class="portfolio__project-img" id="image" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+        <div class="portfolio__project">
+          <a href="#" class="portfolio__project-name">Aliquid</a>
+          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+        <div class="portfolio__project">
+          <a a href="#" class="portfolio__project-name">Quisquam</a>
+          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+        <div class="portfolio__project">
+          <a a href="#" class="portfolio__project-name">Maiores</a>
+          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+        <div class="portfolio__project">
+          <a a href="#" class="portfolio__project-name">Reiciendis</a>
+          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+        <div class="portfolio__project">
+          <a a href="#" class="portfolio__project-name">Ipsam nostrum</a>
+          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
+        </div>
+      </div>
+    </section>
+    <!-- Video -->
+
+    <section class="video p-tb-10rem">
+      <div class="wrapper">
+        <div class="project__video project__video-16by9">
+          <iframe class="project__player" id="video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FORM -->
+    <section class="cta">
+      <h2 class="section__header">Act now</h2>
+      <hr>
+      <h3 class="section__header cta-sub-header">Get special offers and discounts sent right to your inbox</h3>
+      <form action="#" class="cta-form" id="form">
+        <input type="email" class="cta-email" id="email" name="email" placeholder="Enter email">
+        <input type="submit" class="cta-submit" id="submit">
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <div class="credit">
+        <p>&copy; 2018</p>
+      </div>
+      <a class="links_link" href="#" target="_blank">
+        <img class="links__social-icon" alt="twitter-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cGF0aCBzdHlsZT0iZmlsbDojMDNBOUY0OyIgZD0iTTUxMiw5Ny4yNDhjLTE5LjA0LDguMzUyLTM5LjMyOCwxMy44ODgtNjAuNDgsMTYuNTc2YzIxLjc2LTEyLjk5MiwzOC4zNjgtMzMuNDA4LDQ2LjE3Ni01OC4wMTYgIGMtMjAuMjg4LDEyLjA5Ni00Mi42ODgsMjAuNjQtNjYuNTYsMjUuNDA4QzQxMS44NzIsNjAuNzA0LDM4NC40MTYsNDgsMzU0LjQ2NCw0OGMtNTguMTEyLDAtMTA0Ljg5Niw0Ny4xNjgtMTA0Ljg5NiwxMDQuOTkyICBjMCw4LjMyLDAuNzA0LDE2LjMyLDIuNDMyLDIzLjkzNmMtODcuMjY0LTQuMjU2LTE2NC40OC00Ni4wOC0yMTYuMzUyLTEwOS43OTJjLTkuMDU2LDE1LjcxMi0xNC4zNjgsMzMuNjk2LTE0LjM2OCw1My4wNTYgIGMwLDM2LjM1MiwxOC43Miw2OC41NzYsNDYuNjI0LDg3LjIzMmMtMTYuODY0LTAuMzItMzMuNDA4LTUuMjE2LTQ3LjQyNC0xMi45MjhjMCwwLjMyLDAsMC43MzYsMCwxLjE1MiAgYzAsNTEuMDA4LDM2LjM4NCw5My4zNzYsODQuMDk2LDEwMy4xMzZjLTguNTQ0LDIuMzM2LTE3Ljg1NiwzLjQ1Ni0yNy41MiwzLjQ1NmMtNi43MiwwLTEzLjUwNC0wLjM4NC0xOS44NzItMS43OTIgIGMxMy42LDQxLjU2OCw1Mi4xOTIsNzIuMTI4LDk4LjA4LDczLjEyYy0zNS43MTIsMjcuOTM2LTgxLjA1Niw0NC43NjgtMTMwLjE0NCw0NC43NjhjLTguNjA4LDAtMTYuODY0LTAuMzg0LTI1LjEyLTEuNDQgIEM0Ni40OTYsNDQ2Ljg4LDEwMS42LDQ2NCwxNjEuMDI0LDQ2NGMxOTMuMTUyLDAsMjk4Ljc1Mi0xNjAsMjk4Ljc1Mi0yOTguNjg4YzAtNC42NC0wLjE2LTkuMTItMC4zODQtMTMuNTY4ICBDNDgwLjIyNCwxMzYuOTYsNDk3LjcyOCwxMTguNDk2LDUxMiw5Ny4yNDh6Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
+        />
+      </a>
+      <a class="links_link" href="#" target="_blank">
+        <img class="links__social-icon" alt="facebook-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggc3R5bGU9ImZpbGw6IzRENkZBOTsiIGQ9Ik00NzYuNjksNTEySDM1LjMxQzE1Ljg5LDUxMiwwLDQ5Ni4xMSwwLDQ3Ni42OVYzNS4zMUMwLDE1Ljg5LDE1Ljg5LDAsMzUuMzEsMEg0NzYuNjkgIEM0OTYuMTEsMCw1MTIsMTUuODksNTEyLDM1LjMxVjQ3Ni42OUM1MTIsNDk2LjExLDQ5Ni4xMSw1MTIsNDc2LjY5LDUxMiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTQzMi41NTIsODguMjc2djg4LjI3NmgtNzkuNDQ4Yy05LjcxLDAtMTcuNjU1LDcuOTQ1LTE3LjY1NSwxNy42NTV2NTIuOTY2aDg4LjI3NnY4OC4yNzZoLTg4LjI3NiAgVjUxMmgtODguMjc2VjMzNS40NDhoLTcwLjYyMXYtODguMjc2aDcwLjYyMXYtNTIuOTY2YzAtNTUuNjE0LDQyLjM3Mi0xMDEuNTE3LDk3LjEwMy0xMDUuOTMxSDQzMi41NTJ6Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
+        />
+      </a>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
