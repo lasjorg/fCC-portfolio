@@ -5,7 +5,7 @@
   const pageLoad = document.querySelector('.page-load');
   const burgerContainer = document.querySelector('.burger-container');
   const burger = document.querySelector('.burger-icon');
-  const mobileNavMenu = document.querySelector('#mobile-nav');
+  const navList = document.querySelector('.js-nav-trigger');
   let = lastScrollY = 0, ticking = false;
   
   // https://www.html5rocks.com/en/tutorials/speed/animations/#debouncing-scroll-events
@@ -53,12 +53,12 @@
   let isToggled = false;
   const triggerMobileNav = (e) => {
     // Toggle mobile menu on or off
-    // If the menu is toggled on, clicking anywhere will close it
     if ( (e.target === burger || e.target === burgerContainer) && !isToggled) {
-      mobileNavMenu.classList.add('show');
+      // navList.classList.add('show', 'mobile-nav');
+      navList.classList.add('show');
       isToggled = true;
     } else if (isToggled){
-      mobileNavMenu.classList.remove('show');
+      navList.classList.remove('show');
       isToggled = false;
     }
   }
