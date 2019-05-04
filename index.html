@@ -1,145 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blocks of creativity</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Blocks of creativity</title>
-</head>
-
-<body>
-  <div class="page-load" id="page-load-fade">
-    <div class="spinner">
-      <div class="cube1"></div>
-      <div class="cube2"></div>
+  <body>
+    <div class="page-load" id="page-load-fade">
+      <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
     </div>
-  </div>
-  <main class="container" id="main">
-    <header class="header" id="header">
-      <a href="./index.html">
-        <img class="header__logo" id="header-img" src="./img/logo.png" alt="brand logo">
-      </a>
-      <div class="burger-container">
-        <div class="burger-icon"></div>
-      </div>
-      <nav class="site-nav site-nav-flex" id="nav-bar">
-        <ul class="site-nav__list site-nav__list-grid mobile-nav js-nav-trigger">
-          <li>
-            <a class="site-nav__link nav-link" href="#about">About Me</a>
-          </li>
-          <li>
-            <a class="site-nav__link nav-link" href="#projects">Portfolio Projects</a>
-          </li>
-          <li>
-            <a class="site-nav__link nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    
-    <!-- HERO -->
-
-    <section class="hero" id="welcome-section">
-      <div class="hero__title" id="title">
-        <h1 class="hero__h1">
-          <div class="tc-blue">Blocks</div>
-          <div class="tc-teal">of creativity</div>
-        </h1>
-        <div class="block block--1"></div>
-        <div class="block block--2"></div>
-        <div class="block block--3"></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-
-    <section class="about full p-tb-10rem" id="about">
-      <div class="wrapper">
-        <h2 class="about__header about__header--h2">Introduction</h2>
-        <hr>
-        <h3 class="about__header about__header--h3">me</h3>
-        <img class="about__img" src="./img/project-page-comp-v1-about-sectionv2-50p.jpg" alt="">
-        <blockquote class="about__quote">Nothing brings to life again a forgotten memory like a about -
-          <cite>Christopher Poindexter</cite>
-        </blockquote>
-        <div class="bg-detail bg-detail--orange"></div>
-        <div class="bg-detail bg-detail--red-orange"></div>
-      </div>
-    </section>
-
-    <!-- portfolio projects grid -->
-
-    <section class="portfolio full p-tb-10rem" id="projects">
-      <h2 class="section__header">Portfolio projects</h2>
-      <div class="portfolio__grid">
-        <div class="portfolio__project project-tile" id="img-div">
-          <a href="#" class="portfolio__project-name" id="img-caption">Dolores magni</a>
-          <img class="portfolio__project-img" id="image" src="http://via.placeholder.com/350x350" alt="project image">
+    <main class="container" id="main">
+      <header class="header bg-blue-dark" id="header">
+        <div class="burger-container">
+          <div class="burger-icon"></div>
         </div>
-        <div class="portfolio__project project-tile">
-          <a href="#" class="portfolio__project-name">Aliquid</a>
-          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
-        </div>
-        <div class="portfolio__project project-tile">
-          <a a href="#" class="portfolio__project-name">Quisquam</a>
-          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
-        </div>
-        <div class="portfolio__project project-tile">
-          <a a href="#" class="portfolio__project-name">Maiores</a>
-          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
-        </div>
-        <div class="portfolio__project project-tile">
-          <a a href="#" class="portfolio__project-name">Reiciendis</a>
-          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
-        </div>
-        <div class="portfolio__project project-tile">
-          <a a href="#" class="portfolio__project-name">Ipsam nostrum</a>
-          <img class="portfolio__project-img" src="http://via.placeholder.com/350x350" alt="project image">
-        </div>
-      </div>
-    </section>
+        <nav class="site-nav site-nav-flex" id="navbar">
+          <ul
+            class="site-nav__list site-nav__list-grid mobile-nav js-nav-trigger"
+          >
+            <li>
+              <a class="site-nav__link nav-link" href="#about">About Me</a>
+            </li>
+            <li>
+              <a class="site-nav__link nav-link" href="#projects">Projects</a>
+            </li>
+            <li>
+              <a class="site-nav__link nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- Video -->
+      <!-- HERO -->
 
-    <section class="video p-tb-10rem" id="videos">
-      <div class="wrapper">
-        <div class="project__video project__video-16by9">
-          <iframe class="project__player" id="video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <section class="hero" id="welcome-section">
+        <div class="hero__title" id="title">
+          <h1 class="hero__h1">
+            <div class="tc-blue">Blocks</div>
+            <div class="tc-blue-dark">of creativity</div>
+          </h1>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA FORM -->
-    <section class="cta" id="contact">
-      <h2 class="section__header">Act now</h2>
-      <hr>
-      <h3 class="section__header cta-sub-header">Get special offers and discounts sent right to your inbox</h3>
-      <form action="#" class="cta-form" id="form">
-        <input type="email" class="cta-email" id="email" name="email" placeholder="Enter email">
-        <input type="submit" class="cta-submit" id="submit">
-      </form>
-    </section>
+      <!-- ABOUT -->
 
-    <footer class="site-footer">
-      <div class="site-footer__credit">
-        <p>&copy; 2018</p>
-      </div>
-      <!-- TODO: add links to github and FCC, use id="profile-link"  https://simpleicons.org/ -->
-      <a class="site-footer__link" id="profile-link" href="#" target="_blank">
-        <svg class="site-footer__social-icon" aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
-        <p>Github</p>
-      </a>
-      <a class="site-footer__link" id="profile-link" href="#" target="_blank">
-        <svg class="site-footer__social-icon" aria-labelledby="simpleicons-freecodecamp-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-freecodecamp-icon">freeCodeCamp icon</title><path d="M23.967 12.317c0 2.5-.854 4.718-2.598 6.681-.635.729-1.143 1.076-1.488 1.076-.121 0-.256-.033-.346-.125-.092-.096-.15-.223-.15-.35 0-.188.225-.475.674-.889 1.814-1.736 2.727-3.895 2.727-6.456 0-2.846-.943-5.152-2.816-6.936-.374-.342-.57-.627-.57-.852 0-.12.061-.256.164-.345.105-.09.225-.149.346-.149.418 0 1.049.509 1.842 1.527C23.25 7.402 24 9.694 24 12.345l-.033-.028zM0 11.682c0-2.499.854-4.719 2.598-6.681.635-.729 1.143-1.076 1.49-1.076.119 0 .254.033.344.125.09.095.15.189.15.314 0 .188-.225.477-.674.918-1.781 1.744-2.711 3.895-2.711 6.462 0 2.847.951 5.158 2.821 6.935.38.344.569.633.569.854 0 .127-.061.256-.16.348-.099.094-.225.16-.352.16-.436 0-1.033-.51-1.828-1.518C.734 16.654 0 14.373 0 11.682zm17.699 6.869H6.715c-.35 0-.668-.287-.668-.666 0-.383.285-.668.668-.668h10.984c.348 0 .668.285.668.668-.006.385-.287.666-.668.666zm-6-8.919c.197-.025.344.615.361.749.046.353-.071.693-.231 1.003-.597 1.165-1.978 2.104-1.612 3.575.166.635.494 1.076 1.514 1.619-.345.119-.824-.111-1.094-.301-1.199-.816-1.963-2.156-1.888-3.619.03-.464.12-.92.239-1.368.375-1.281 1.139-2.401 1.588-3.647.225-.599.39-1.324.211-1.953-.09-.309-.255-.599-.465-.849-.061-.076-.404-.465-.539-.42.6-.225 1.139-.016 1.662.299.404.24.72.585.959.975.449.719.629 1.542.719 2.381.031.345-.015 1.184.39 1.35.419.179.749-.525.839-.81.195-.645-.06-1.259-.314-1.858.061.121.285.255.389.346l.36.344c.435.449.704 1.004.884 1.604.164.539.24 1.093.27 1.633.074 1.123-.18 2.278-.629 3.311-.195.463-.449.898-.779 1.273-.319.373-.748.613-1.093.957.808-.809 1.238-2.127 1.123-3.131-.06-.553-.239-1.063-.659-1.572 0 0 .045.358.087.583.075.495-.255 1.02-.644.959-.285-.029-.136-.643-.105-.838.105-.584-.03-1.154-.244-1.693-.209-.509-.6-.914-1.198-.823l-.101-.079z"></path></svg>
-        <p>FCC</p>
-      </a>
-    </footer>
-  </main>
-  <script src="main.js"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
+      <section class="about" id="about">
+        <h2 class="section__header">About me</h2>
+        <div class="about-grid" data-aos="fade-up" data-aos-offset="200">
+          <div class="about-info">
+            <h2 class="about__header about__header--h2">
+              A little bit about me
+            </h2>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+              magni. Quas nobis odit, laborum maxime ab consequatur provident
+              nisi sequi quasi laudantium aliquam nihil in rem dolor illum vero
+              vel?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+              magni. Quas nobis odit, laborum maxime ab consequatur provident
+              nisi sequi quasi laudantium aliquam nihil in rem dolor illum vero
+              vel?
+            </p>
+          </div>
+          <img class="about__img" src="https://via.placeholder.com/400" alt="" />
+        </div>
+      </section>
 
+      <!-- portfolio projects grid -->
+
+      <section class="portfolio p-tb-10rem" id="projects">
+        <h2 class="section__header" data-aos="fade-right">Portfolio projects</h2>
+        <div class="portfolio__grid">
+          <div class="portfolio__project project-tile" id="img-div">
+            <a
+              href="https://fcc-tribute-page-chuck-schuldiner.netlify.com/"
+              class="portfolio__project-name"
+              id="img-caption"
+              >Tribute Page</a
+            >
+            <img
+              class="portfolio__project-img"
+              id="image"
+              src="./img/chuck-schuldiner-tribute.jpg"
+              alt="project image"
+            />
+          </div>
+          <div class="portfolio__project project-tile">
+            <a
+              href="https://fcc-form-page-space-booking.netlify.com/"
+              class="portfolio__project-name"
+              >Form Page</a
+            >
+            <img
+              class="portfolio__project-img"
+              src="./img/above-and-beyond.jpg"
+              alt="project image"
+            />
+          </div>
+          <div class="portfolio__project project-tile">
+            <a
+              a
+              href="https://fcc-technical-documentation-page.netlify.com"
+              class="portfolio__project-name"
+              >Technical Docs</a
+            >
+            <img
+              class="portfolio__project-img"
+              src="/img/ECMAScript-6-features.jpg"
+              alt="project image"
+            />
+          </div>
+          <div class="portfolio__project project-tile">
+            <a
+              a
+              href="https://fcc-product-landing-page-perfume.netlify.com/"
+              class="portfolio__project-name"
+              >Product Page</a
+            >
+            <img
+              class="portfolio__project-img"
+              src="/img/Imagination.jpg"
+              alt="project image"
+            />
+          </div>
+          <div class="portfolio__project project-tile">
+            <a a href="#" class="portfolio__project-name">Reiciendis</a>
+            <img
+              class="portfolio__project-img"
+              src="https://via.placeholder.com/350x350"
+              alt="project image"
+            />
+          </div>
+          <div class="portfolio__project project-tile">
+            <a a href="#" class="portfolio__project-name">Ipsam nostrum</a>
+            <img
+              class="portfolio__project-img"
+              src="https://via.placeholder.com/350x350"
+              alt="project image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FORM -->
+      <section class="cta p-tb-10rem" data-aos="fade-up" id="contact">
+        <h2 class="section__header">Contact me</h2>
+        <hr />
+        <h3 class="section__header cta-sub-header">Shoot me a mail</h3>
+        <form action="#" class="cta-form" id="form">
+            <input
+              aria-label="Search"
+              type="email"
+              class="cta-email"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
+          <input type="submit" class="cta-submit" id="submit"/>
+        </form>
+      </section>
+
+      <footer class="site-footer bg-blue-dark">
+        <div class="site-footer__credit">
+          <span>&copy; 2019</span>
+        </div>
+        <!-- TODO: add links to github and FCC, use id="profile-link"  https://simpleicons.org/ -->
+        <a class="site-footer__link" id="profile-link" href="#" target="_blank">
+          <svg
+            class="site-footer__social-icon"
+            aria-labelledby="simpleicons-github-icon"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title id="simpleicons-github-icon">GitHub icon</title>
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            ></path>
+          </svg>
+          <span>Github</span>
+        </a>
+        <a class="site-footer__link" id="profile-link" href="#" target="_blank">
+          <svg
+            class="site-footer__social-icon"
+            aria-labelledby="simpleicons-freecodecamp-icon"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title id="simpleicons-freecodecamp-icon">freeCodeCamp icon</title>
+            <path
+              d="M23.967 12.317c0 2.5-.854 4.718-2.598 6.681-.635.729-1.143 1.076-1.488 1.076-.121 0-.256-.033-.346-.125-.092-.096-.15-.223-.15-.35 0-.188.225-.475.674-.889 1.814-1.736 2.727-3.895 2.727-6.456 0-2.846-.943-5.152-2.816-6.936-.374-.342-.57-.627-.57-.852 0-.12.061-.256.164-.345.105-.09.225-.149.346-.149.418 0 1.049.509 1.842 1.527C23.25 7.402 24 9.694 24 12.345l-.033-.028zM0 11.682c0-2.499.854-4.719 2.598-6.681.635-.729 1.143-1.076 1.49-1.076.119 0 .254.033.344.125.09.095.15.189.15.314 0 .188-.225.477-.674.918-1.781 1.744-2.711 3.895-2.711 6.462 0 2.847.951 5.158 2.821 6.935.38.344.569.633.569.854 0 .127-.061.256-.16.348-.099.094-.225.16-.352.16-.436 0-1.033-.51-1.828-1.518C.734 16.654 0 14.373 0 11.682zm17.699 6.869H6.715c-.35 0-.668-.287-.668-.666 0-.383.285-.668.668-.668h10.984c.348 0 .668.285.668.668-.006.385-.287.666-.668.666zm-6-8.919c.197-.025.344.615.361.749.046.353-.071.693-.231 1.003-.597 1.165-1.978 2.104-1.612 3.575.166.635.494 1.076 1.514 1.619-.345.119-.824-.111-1.094-.301-1.199-.816-1.963-2.156-1.888-3.619.03-.464.12-.92.239-1.368.375-1.281 1.139-2.401 1.588-3.647.225-.599.39-1.324.211-1.953-.09-.309-.255-.599-.465-.849-.061-.076-.404-.465-.539-.42.6-.225 1.139-.016 1.662.299.404.24.72.585.959.975.449.719.629 1.542.719 2.381.031.345-.015 1.184.39 1.35.419.179.749-.525.839-.81.195-.645-.06-1.259-.314-1.858.061.121.285.255.389.346l.36.344c.435.449.704 1.004.884 1.604.164.539.24 1.093.27 1.633.074 1.123-.18 2.278-.629 3.311-.195.463-.449.898-.779 1.273-.319.373-.748.613-1.093.957.808-.809 1.238-2.127 1.123-3.131-.06-.553-.239-1.063-.659-1.572 0 0 .045.358.087.583.075.495-.255 1.02-.644.959-.285-.029-.136-.643-.105-.838.105-.584-.03-1.154-.244-1.693-.209-.509-.6-.914-1.198-.823l-.101-.079z"
+            ></path>
+          </svg>
+          <span>FCC</span>
+        </a>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
