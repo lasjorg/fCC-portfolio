@@ -409,6 +409,10 @@ hr {
   min-width: 57rem;
 }
 
+.hero__h1 > span {
+  display: block;
+}
+
 @media (max-width: 32.75em) {
   .hero__h1 {
     font-size: 6rem;
