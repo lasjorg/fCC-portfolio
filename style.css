@@ -295,7 +295,7 @@ hr {
     transition: all 0.2s ease-in;
   }
   .mobile-nav .site-nav__link::before {
-    top: 15rem;
+    top: 15.5rem;
   }
   .mobile-nav > li:not(:last-child) {
     padding-bottom: 2rem;
@@ -581,6 +581,15 @@ hr {
   font-family: var(--ss-font);
   font-size: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 48.75em) {
+  .cta-email {
+    width: 70vw;
+  }
+  .cta-submit {
+    left: 77.5%;
+  }
 }
 
 /**
