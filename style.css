@@ -4,15 +4,13 @@
 
 :root {
   --main-black: #141414;
-
+  --main-black-alpha: rgba(20, 20, 20, 0.9);
   --main-white: #d8d8d8;
-  --main-white-warm: #fff1d0;
-
   --teal-dark: #0c6159;
-
-  --blue-purple: #4f7cac;
   --blue-dark: #1e618d;
-  --blue-highlight: #079fe5;
+  --blue-dark-alpha: rgba(31, 96, 141, 0.8);
+  --blue-highlight: #0f90cc;
+  --orange: #d57f00;
 
   --ss-font: 'Quicksand';
 }
@@ -26,7 +24,6 @@ html {
   /* 1rem = 10px */
   font-size: 62.5%;
   box-sizing: border-box;
-  min-width: 340px;
   scroll-behavior: smooth;
 }
 
@@ -149,6 +146,13 @@ hr {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
   }
 }
 
@@ -293,13 +297,17 @@ hr {
     visibility: hidden;
     background: var(--blue-highlight);
     transition: all 0.2s ease-in;
+    user-select: none;
   }
+
   .mobile-nav .site-nav__link::before {
     top: 15.5rem;
   }
+
   .mobile-nav > li:not(:last-child) {
     padding-bottom: 2rem;
   }
+
   .show {
     visibility: visible;
     left: 0;
@@ -308,25 +316,18 @@ hr {
 
 /* BURGER */
 
-.burger-container {
-  position: absolute;
-  background: transparent;
-  z-index: 2;
-  visibility: hidden;
-  left: -140px;
-  cursor: pointer;
-}
-
-.burger-container {
+.menu-icon-container {
   position: relative;
   background: transparent;
   left: 100%;
-  cursor: pointer;
   padding: 20px;
+  border: none;
   visibility: hidden;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.burger-icon {
+.menu-icon-container__icon {
   position: absolute;
   width: 5rem;
   height: 3px;
@@ -337,7 +338,7 @@ hr {
   transition: all 0.3s ease-out;
 }
 
-.burger-icon:before {
+.menu-icon-container__icon:before {
   content: '';
   top: -1.1rem;
   right: 0rem;
@@ -348,7 +349,7 @@ hr {
   transition: all 0.3s ease-out;
 }
 
-.burger-icon::after {
+.menu-icon-container__icon::after {
   content: '';
   top: 1.1rem;
   right: 0rem;
@@ -360,22 +361,22 @@ hr {
 }
 
 @media only screen and (max-width: 46.25em) {
-  .burger-container {
+  .menu-icon-container {
     visibility: visible;
     left: 20px;
   }
 }
 
-.burger-container.toggled .burger-icon {
+.menu-icon-container.toggled .menu-icon-container__icon {
   background: transparent;
 }
 
-.burger-container.toggled .burger-icon:before {
+.menu-icon-container.toggled .menu-icon-container__icon:before {
   transform: rotate(45deg);
   top: 1rem;
 }
 
-.burger-container.toggled .burger-icon:after {
+.menu-icon-container.toggled .menu-icon-container__icon:after {
   transform: rotate(-45deg);
 }
 
@@ -474,7 +475,6 @@ hr {
 */
 
 .portfolio {
-  background: linear-gradient(transparent, var(--rose-red));
   max-width: 1400px;
   margin: 0 auto;
   padding-left: 4rem;
@@ -492,12 +492,17 @@ hr {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio__project {
   align-items: stretch;
   background-color: var(--main-black);
-  border: 1rem solid var(--blue-dark);
+  border: 0.1rem solid var(--orange);
+  border-radius: 2px;
   position: relative;
   overflow: hidden;
 }
@@ -513,8 +518,7 @@ hr {
   font-size: 3rem;
   font-weight: 400;
   text-transform: uppercase;
-  background-color: var(--blue-highlight);
-  background-color: rgba(31, 96, 141, 0.8);
+  background-color: var(--main-black-alpha);
   opacity: 0;
   z-index: 1;
   position: absolute;
@@ -547,27 +551,33 @@ hr {
 }
 
 .cta-form {
-  display: block;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 7rem;
   height: 20vh;
-  background: var(--rose-red);
-  margin: 0 auto;
-  position: relative;
+  margin: 2rem auto 0 auto;
+  max-width: 640px;
+  padding: 0 4vw;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .cta-email {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50vw;
-  min-width: 160px;
-  height: 7vh;
-  background: azure;
   outline: none;
   border: none;
   font-family: var(--ss-font);
   font-size: 3rem;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .cta-email::placeholder {
@@ -575,25 +585,54 @@ hr {
 }
 
 .cta-submit {
-  position: absolute;
-  top: 50%;
-  left: 71%;
-  transform: translate(-50%, -50%);
-  min-width: 15vw;
-  height: 7vh;
-  border: none;
   font-family: var(--ss-font);
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #141414;
+  padding: 0 2rem;
+  background: var(--orange);
+  border: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   cursor: pointer;
 }
 
-@media (max-width: 48.75em) {
-  .cta-email {
-    width: 70vw;
-  }
-  .cta-submit {
-    left: 77.5%;
-  }
+.dialog:not([open]) {
+  display: none;
+}
+
+.dialog {
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  min-width: 100%;
+  height: inherit;
+  min-height: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: hsla(0, 0%, 28.2%, 0.8);
+  color: inherit;
+}
+
+.dialog-content-container {
+  display: grid;
+  max-width: 860px;
+  padding: 1rem;
+  width: 60vw;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.dialog-content-container svg {
+  place-self: end;
+  cursor: pointer;
 }
 
 /**

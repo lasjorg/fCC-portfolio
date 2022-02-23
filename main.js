@@ -1,29 +1,42 @@
-(function () {
-
+document.addEventListener('DOMContentLoaded', () => {
   const pageLoad = document.querySelector('.page-load');
-  const burgerContainer = document.querySelector('.burger-container');
-  const burger = document.querySelector('.burger-icon');
+  const menuIconContainer = document.querySelector('.menu-icon-container');
+  const menuIcon = document.querySelector('.menu-icon-container__icon');
   const navList = document.querySelector('.js-nav-trigger');
+  const emailForm = document.querySelector('form');
 
   // Silly page loading spinner
   const pageFade = () => {
     setTimeout(() => {
       pageLoad.classList.remove('page-load');
-      pageLoad.style.display = "none";
+      pageLoad.style.display = 'none';
     }, 300);
-  }
+  };
 
-  const triggerMobileNav = (e) => {
-    console.log(e.target);
-    if (e.target === burger || e.target === burgerContainer) {
+  const triggerMobileNav = ({ target }) => {
+    const clickTarget = target;
+    if (clickTarget === menuIcon || clickTarget === menuIconContainer) {
       navList.classList.toggle('show');
-      burgerContainer.classList.toggle('toggled');
+      menuIconContainer.classList.toggle('toggled');
     } else {
       navList.classList.remove('show');
-      burgerContainer.classList.remove('toggled');
-      }
-  }
+      menuIconContainer.classList.remove('toggled');
+    }
+  };
+
+  emailForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const modal = document.querySelector('.dialog');
+    const closeButton = document.querySelector('dialog svg');
+
+    modal.showModal ? modal.showModal() : modal.setAttribute('open', true);
+
+    closeButton.addEventListener('click', () => {
+      modal.close ? modal.close() : modal.removeAttribute('open');
+    });
+    emailForm.reset();
+  });
 
   window.addEventListener('load', pageFade);
   window.addEventListener('click', triggerMobileNav);
-})();
+});
